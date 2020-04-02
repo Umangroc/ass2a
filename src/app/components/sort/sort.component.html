@@ -1,0 +1,8 @@
+<h2>Sort Options</h2>
+<mat-radio-group class="radio-group" [(ngModel)]="selectValue">
+  <mat-radio-button class="radio-button" *ngFor="let sortSelection of sortOptions" [value]="sortSelection">
+    {{sortSelection}}
+  </mat-radio-button>
+</mat-radio-group>
+<button mat-raised-button (click)="onNoClick()" style="width: 50%;">Cancel</button>
+<button mat-raised-button (click)="sort(selectValue)" style="width: 50%;">Apply</button>

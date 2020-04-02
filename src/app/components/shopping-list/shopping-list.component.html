@@ -1,0 +1,16 @@
+<div style="text-align:center;">
+<div *ngFor="let list of sortedList;" style="display: inline-flex;margin-left: 20px;">
+  <mat-card class="example-card" style="margin-top: 20px;">
+    <img mat-card-image src={{list.img_url}} style="height: 200px;width: 200px;">
+    <mat-card-content>
+      <p>{{list.name}}</p>
+      <div style="text-align-last: justify;">{{discountedPrice[0]}}Rs.
+        <s>{{list.price}}</s> 
+          {{list.discount}}%off</div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: center;">
+      <button mat-raised-button (click)="addtocart(list)" style="background-color: #fcba12;border-radius: 25px;">Add to Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>

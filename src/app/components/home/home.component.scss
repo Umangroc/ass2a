@@ -1,0 +1,19 @@
+.Mob{
+display: block;
+}
+
+@media (min-width: 768px){
+    .Mob{
+        display: none;
+        }
+} 
+
+.Tab{
+display: inline-flex;
+}
+    
+@media (max-width: 767px){
+.Tab{
+    display: none;
+    }
+} 

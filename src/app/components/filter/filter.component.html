@@ -1,0 +1,8 @@
+<h2>Filter Options</h2>
+    <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+   <p style="text-align: center;"> Price</p>
+<div style="width: 100%;">
+    <button mat-raised-button (click)="onNoClick()" style="width: 50%;">Cancel</button>
+    <button mat-raised-button (click)="filter()" style="width: 50%;">Apply</button>
+</div>
+

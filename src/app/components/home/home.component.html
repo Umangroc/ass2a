@@ -1,0 +1,25 @@
+
+<app-header></app-header>
+<div class="Tab">
+    <div style="width: 300px;">
+        <h3>Filters</h3>
+        <button mat-raised-button style="background-color: #fcba12;border-radius: 25px;">Apply</button>
+    </div>
+    
+    <div style="display: block;">
+        <div style="display: inline-flex;margin-left: 50px;">
+            <h3>Sort By</h3>
+            <button mat-button (click)="sort('high')">Price -- High Low</button>
+            <button mat-button (click)="sort('low')">Price -- Low High</button>
+            <button mat-button (click)="sort('discount')">Discount</button>
+        </div>
+        <app-shopping-list></app-shopping-list>
+    </div>
+</div>
+<div class="Mob">   
+    <div style="display: inline-flex;width: 100%;justify-content: center;margin-top: 10px;">
+        <button mat-raised-button (click)="openFilterDialog()">Filters</button>
+        <button mat-raised-button (click)="openSortDialog()">Sort</button>
+    </div>
+    <app-shopping-list></app-shopping-list>
+</div>
