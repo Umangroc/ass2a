@@ -27,7 +27,22 @@ export class DataService {
   private itemSource = new BehaviorSubject('None');
   currentitem = this.itemSource.asObservable();
 
-  changeitem(message: string) {
-  this.itemSource.next(message)
+  changeitem(message: any) {
+  this.itemSource.next(message)}
+
+  //From Add to Cart Selection to hopping List
+  private arrCartSource = new BehaviorSubject('None');
+  currentArrCart = this.arrCartSource.asObservable();
+
+  changeArrCart(message: any) {
+  this.arrCartSource.next(message)
+}
+
+//Filtering
+private filterSource = new BehaviorSubject('None');
+currentFilter = this.filterSource.asObservable();
+
+changeFilter(message: any) {
+this.filterSource.next(message)
 }
 }

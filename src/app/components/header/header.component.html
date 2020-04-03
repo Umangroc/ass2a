@@ -5,7 +5,12 @@
         <i class="fa fa-star" style="color: #fcba12;font-size: 30px;"></i></button>
     </div>
     <div style="text-align: end;width: 100%;">
-        <i class="fa fa-search" style="font-size: 30px;margin-top: 10px;"></i>
+        <mat-form-field>
+              <input matInput [(ngModel)]="searchText">
+              <button matSuffix mat-icon-button (click)=search()>
+                <i class="fa fa-search"></i>
+              </button>
+        </mat-form-field>
         <button mat-icon-button routerLink="/cart">
             <i class="fa fa-shopping-cart" style="font-size: 30px;margin-bottom: 8px;"></i></button>    
     </div>

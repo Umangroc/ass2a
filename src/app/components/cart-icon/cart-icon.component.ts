@@ -10,21 +10,19 @@ export class CartIconComponent implements OnInit {
 
   products: any; 
   show: any = false;
-  // recieve = [];
+  recieve = [];
 
   constructor(private dataSvc: DataService) { 
-    this.products = [];
   }
 
   ngOnInit() {
-    // console.log(this.products);
     
     this.dataSvc.currentitem.subscribe((res: any) => {
       if(res!="None"){
         this.show = true;
-        this.products.push(res); 
-        // localStorage.setItem("array", JSON.stringify(this.products));
-        console.log("in CArt Component", this.products);
+        this.recieve = res;
+        this.dataSvc.changeArrCart(res);
+        console.log("in CArt Component", this.recieve);
       }
       console.log(this.show);
     })

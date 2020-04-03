@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
@@ -22,6 +23,7 @@ import { CartIconComponent } from './components/cart-icon/cart-icon.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { SortComponent } from './components/sort/sort.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { SearchPipe } from './pipe/search/search.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { Ng5SliderModule } from 'ng5-slider';
     HeaderComponent,
     CartIconComponent,
     FilterComponent,
-    SortComponent
+    SortComponent,
+    SearchPipe
   ],
   entryComponents: [FilterComponent,SortComponent],
   imports: [
@@ -46,6 +49,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     MatCardModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatRadioModule,
     MatSliderModule,

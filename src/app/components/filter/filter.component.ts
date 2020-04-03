@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HomeComponent } from '../home/home.component';
 import { Options,LabelType } from 'ng5-slider';
+import { DataService } from 'src/app/services/dataService/data.service';
 
 @Component({
   selector: 'app-filter',
@@ -10,7 +11,9 @@ import { Options,LabelType } from 'ng5-slider';
 })
 export class FilterComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<HomeComponent>) { }
+  values = [];
+
+  constructor(public dialogRef: MatDialogRef<HomeComponent>,private dataSvc: DataService) { }
 
   ngOnInit() {
   }
@@ -34,6 +37,9 @@ export class FilterComponent implements OnInit {
   };
 
   filter(){
+    console.log(this.minValue,this.maxValue);
+    this.values = [this.minValue,this.maxValue]
+    this.dataSvc.changeFilter(this.values);
     this.dialogRef.close();
   }
 

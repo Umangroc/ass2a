@@ -1,21 +1,26 @@
 <app-header></app-header>
 <div *ngIf="show" style="display: inline-flex;">
-        <div *ngFor="let product of products" style="display: inline-flex;margin-left: 20px;">
-            <mat-card style="margin-top: 20px;display: inline-flex;">
-                <div style="width: 200px">
-                    <img mat-card-image src={{product.img_url}} style="height: 200px;width: 100%;"> 
-                </div>
-              <div style="width: 400px;">
-                <p>{{product.name}}</p>
-                <div style="text-align-last: start;">
-                  <s>{{product.price}}</s> 
-                    {{product.discount}}%off</div>
-              </div>  
-              <div style="align-self: center;">
-                <button mat-raised-button (click)="remove(product)" style="height: 50px;">Remove</button>
-              </div>
-            </mat-card>
+  <!-- Left Side -->
+  <div style="display: block;margin-left: 20px;">
+    <div *ngFor="let product of recieve">
+      <mat-card style="margin-top: 20px;display: inline-flex;">
+          <div style="width: 200px">
+              <img mat-card-image src={{product.itemUrl}} style="height: 200px;width: 100%;"> 
           </div>
+        <div style="width: 400px;">
+          <p>{{product.itemName}}</p>
+          <div style="text-align-last: start;">
+            {{product.itemSellingPrice}}
+            <s>{{product.itemOriginalPrice}}</s> 
+              {{product.itemDiscount}}%off</div>
+        </div>  
+        <div style="align-self: center;">
+          <button mat-raised-button (click)="remove(product)" style="height: 50px;">Remove</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+        <!-- Right Side -->
     <div >
         <mat-card style="margin-top: 20px;height: 200px;width: 200px;margin-left: 20px;">
               Products Details 
