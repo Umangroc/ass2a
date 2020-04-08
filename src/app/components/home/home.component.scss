@@ -1,5 +1,18 @@
 .Mob{
-display: block;
+    display: block;
+    background: #f0f3f7;
+    min-height: 86vh;
+
+    .buttons{
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+
+        .size{
+            width: 50%;
+        }
+    }
 }
 
 @media (min-width: 768px){
@@ -9,7 +22,57 @@ display: block;
 } 
 
 .Tab{
-display: inline-flex;
+    display: inline-flex;
+    background: #f0f3f7;
+    min-height: 86vh;
+    width: 100%;
+
+    .filter{
+        width: 300px;
+        padding: 5px;
+        border-right: solid;
+        border-width: 0.2px;
+        border-color: #d8dde6;
+        max-width: 200px;
+
+        .heading{
+            margin-left: 10px;
+        }
+
+        .slider{
+            text-align: center;
+            padding: 5px;
+
+            .price{
+                margin-top: 0px;
+            }
+
+            .button{
+                background-color: blue;
+                color: white;
+                padding: 0px 40px;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    .right-side{
+        display: block;
+
+        .sort{
+            display: inline-flex;
+            margin-left: 60px;
+
+            .active{
+                color: blue;
+                font-weight: 600;
+            }
+            .underline{
+                margin: 0px;
+            }
+        }
+          
+    }
 }
     
 @media (max-width: 767px){

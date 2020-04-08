@@ -1,0 +1,66 @@
+.header-all-content{
+    background-color: blue;
+    color: white;
+    display: inline-flex;
+    width: 100%;
+
+    .left-side-header{
+        align-self: center;
+        padding: 13px 0px;
+
+        .star-icon{
+            color: #fcba12;
+            font-size: 40px;
+            padding-left: 10px;
+        }
+    }
+        
+
+    .right-side-header{
+        text-align: end;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .search-button{
+            padding-right: 5px;
+            font-size: 25px;
+            margin-bottom: 8px;
+            }
+
+        .form-field{
+            padding-right: 11px;
+
+            .search-icon{
+                font-size: 25px;
+            }
+        }
+
+        .cart-button{
+            padding-right: 5px;
+            vertical-align: sub;
+            margin-right: 5px;
+
+            .cart-icon{
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .badge{
+                background-color: tomato;
+                position: relative;
+                font-size: 15px;
+                padding: 2px 5px;
+                border-radius: 50%;
+                top: -15px;
+                left: -10px;
+            }
+        }
+    }    
+}
+
+
+
+
+

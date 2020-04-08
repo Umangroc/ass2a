@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { HomeComponent } from './components/home/home.component';
@@ -53,6 +54,7 @@ import { SearchPipe } from './pipe/search/search.pipe';
     MatInputModule,
     MatRadioModule,
     MatSliderModule,
+    MatSnackBarModule,
     NouisliderModule
   ],
   providers: [],

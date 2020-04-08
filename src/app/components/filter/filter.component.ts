@@ -12,15 +12,20 @@ import { DataService } from 'src/app/services/dataService/data.service';
 export class FilterComponent implements OnInit {
 
   values = [];
+  minValue: number;
+  maxValue: number;
 
   constructor(public dialogRef: MatDialogRef<HomeComponent>,private dataSvc: DataService) { }
 
   ngOnInit() {
+    this.dataSvc.currentFilterDialog.subscribe((res: any) => {
+      console.log("Filter Values in Filter Dialog",res);
+      this.minValue = res[0];
+      this.maxValue = res[1];
+    });
   }
 
   // ng-5 filter tray
-  minValue: number = 100;
-  maxValue: number = 10000;
   options: Options = {
     floor: 100,
     ceil: 10000,

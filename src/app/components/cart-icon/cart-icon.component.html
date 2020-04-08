@@ -1,31 +1,68 @@
-<app-header></app-header>
-<div *ngIf="show" style="display: inline-flex;">
-  <!-- Left Side -->
-  <div style="display: block;margin-left: 20px;">
-    <div *ngFor="let product of recieve">
-      <mat-card style="margin-top: 20px;display: inline-flex;">
-          <div style="width: 200px">
-              <img mat-card-image src={{product.itemUrl}} style="height: 200px;width: 100%;"> 
+<div class="header"> 
+      <button mat-icon-button routerLink="/home" (click)="refresh()" class="star-button">
+      <i class="fa fa-star star-icon"></i></button>
+</div>
+
+<div class="background">
+  <div *ngIf="show" class="all">
+    <!-- Left Side -->
+    <div class="items-box">
+      <div *ngFor="let product of recieve" class="loop">
+        <mat-card class="left-card">
+          <div class="image-box">
+              <img mat-card-image src={{product.itemUrl}} class="image"> 
           </div>
-        <div style="width: 400px;">
-          <p>{{product.itemName}}</p>
-          <div style="text-align-last: start;">
-            {{product.itemSellingPrice}}
-            <s>{{product.itemOriginalPrice}}</s> 
-              {{product.itemDiscount}}%off</div>
-        </div>  
-        <div style="align-self: center;">
-          <button mat-raised-button (click)="remove(product)" style="height: 50px;">Remove</button>
+          <div class="non-image-box">
+            <p class="item-name">{{product.itemName}}</p>
+            <div class="second-row-content">
+              <div>
+                <span class="selling-price">₹{{product.itemSellingPrice}}</span>
+                <s class="original-price">{{product.itemOriginalPrice}}</s> 
+                <span class="discount">{{product.itemDiscount}}%off</span>
+              </div>
+              <div class="number-of-product">
+                <button mat-icon-button>
+                  <i class="fa fa-minus-circle" (click)=minus(product)></i>
+                </button>
+                <!-- <input matInput value={{product.itemNumber}} style="width: 10px;"> -->
+                <p class="number">{{product.itemNumber}}</p>
+                <button mat-icon-button>
+                  <i class="fa fa-plus-circle" (click)=plus(product)></i>
+                </button>
+              </div>
+              <div>
+                <button mat-raised-button (click)="remove(product)" class="remove-button">Remove</button>
+              </div>
+            </div>
+          </div>     
+        </mat-card>
+      </div>
+    </div>
+    <!-- Right Side -->
+    <div class="total-box">
+      <mat-card class="right-card">
+        <p class="first-line">PRODUCTS DETAILS</p> 
+        <hr>
+        <div class="grid-box">
+          <div class="content">
+            <p>Price ({{NumberOfItem}}  item) </p> 
+            <p>:</p>
+            <p>₹{{totalSum}}</p>
+          </div>
+    
+          <div class="content">
+            <p> Discount</p> 
+            <p>:</p>
+            <p>₹{{totalDiscount}}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="total">
+          <p>Total Payable</p> 
+          <p>₹{{totalPayment}}</p>
         </div>
       </mat-card>
     </div>
   </div>
-        <!-- Right Side -->
-    <div >
-        <mat-card style="margin-top: 20px;height: 200px;width: 200px;margin-left: 20px;">
-              Products Details 
-              <hr>
-              Total Payable
-          </mat-card>
-    </div>
 </div>
+

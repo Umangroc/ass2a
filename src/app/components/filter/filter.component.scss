@@ -1,3 +1,31 @@
-.mat-dialog-container{
-    padding: 0px;
+.header{
+    margin-left: 10px;
+}
+
+.center-slider{
+    text-align: -webkit-center;
+
+    .slider-width{
+        width: 90%;
+
+        .price{
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.divider{
+    margin-bottom: 0px;
+}
+
+.last-line{
+    width: 100%;
+
+    .button{
+        width: 50%;
+        color: blue;
+        font-weight: 700;
+    }
 }
